@@ -43,16 +43,16 @@ int main()
 		}
 		for (int i = 0; i < (1 << n); i++)
 		{
-			int j = i;
-			int z = 0;
-			int sum = 0;
+			int j = i, z = 0,sum = 0;
 			while (j)
 			{
 				if (j & 1)
 				{
 					sum += v[z];
 				}
-				j /= 2;
+
+				j=j>>1;
+
 				if (j == 0)
 					break;
 				z++;
